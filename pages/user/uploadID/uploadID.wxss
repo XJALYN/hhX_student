@@ -1,0 +1,59 @@
+/* pages/uploadID/uploadID.wxss */
+.cell{
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 60rpx);
+}
+.cell__title{
+  font-weight:500;
+  color: #010101;
+  font-size:36rpx;
+}
+.cell__input{
+  font-size:36rpx;
+  margin-left: 30rpx;
+}
+.upload__title{
+  margin-top: 60rpx;
+  margin-left: 30rpx;
+  font-size:32rpx;
+  font-weight: 600;
+}
+.upload{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  width: calc(100% - 60rpx);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.upload__image-face{
+  width: 325rpx;
+  height: 200rpx;
+  border:1px solid rgb(247,247,247);
+  background: url('https://ws4.sinaimg.cn/large/006tNbRwgy1fxntlrsnj6j305k05k3yf.jpg');
+  background-size: 100% 100%;
+}
+.upload__image-back{
+  width: 325rpx;
+  height: 200rpx;
+  border:1px solid rgb(247,247,247);
+  background: url('https://ws3.sinaimg.cn/large/006tNbRwgy1fxntp5lfehj305k05kwee.jpg');
+  background-size: 100% 100%;
+}
+
+.btn-submit{
+  position: fixed;
+  bottom: 40rpx;
+  left: 30rpx;
+  right: 30rpx;
+  height: 104rpx;
+  text-align: center;
+  line-height: 104rpx;
+  background-color: #FF6D10;
+  color: white;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+}

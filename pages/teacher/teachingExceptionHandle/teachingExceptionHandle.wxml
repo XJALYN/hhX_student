@@ -1,0 +1,22 @@
+<!--pages/teachingExceptionHandle.wxml-->
+<view>
+ <view class="detail">
+  系统检测老师上课打卡时间为8:00,下课打卡时间为8:30,没有按照系统流程完成上课!
+ </view>
+
+ <view class="group-title">请您选择符合真实情况一项</view>
+ <view class="item" bindtap='bindHandle' data-mode='0'>
+  <text class="title"> 老师正常上完所有的课程</text>
+  <view style='flex:1'> </view>
+  <icon class="icon" type='success' color="{{handled_mode?'rgb(0,171,72)':'rgb(240,240,240)'}}"></icon>
+ </view>
+
+  <view class="item" bindtap='bindHandle' data-mode='1'>
+  <text class="title"> 情况不明,让系统处理</text>
+  <view style='flex:1'> </view>
+   <icon class="icon" type='success' color="{{handled_mode==1?'rgb(0,171,72)':'rgb(240,240,240)'}}"></icon>
+  </view>
+
+  <button type='success' class="btn-submit" bindtap='bindSubmit'> 提交</button> 
+  <view class="tip">友情提示,如果您未在当天23:59分之前处理异常,老师的授课时长将按照统计的时长为准!</view>
+</view>

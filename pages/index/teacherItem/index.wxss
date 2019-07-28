@@ -1,0 +1,64 @@
+.teacher-item{
+  display: flex;
+  width: calc(100% - 60rpx);
+  height: 140rpx;
+  align-items: center;
+}
+.teacher-item__avatar{
+  margin-left: 30rpx;
+  width: 94rpx;
+  height: 94rpx;
+  border-radius: 47rpx;
+  background-color: rgb(240,240,240);
+}
+.teacher-item__mid{
+  margin-left: 60rpx;
+}
+.teacher-item__mid__nickname{
+  font-size: 32rpx;
+  color: #030303;
+  font-weight: 600;
+}
+.teacher-item__mid__school{
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #4A4A4A;
+  font-weight: 500;
+}
+.teacher-item__mid__rater{
+  height: 36rpx;
+  display: flex;
+  align-items: center;
+}
+.teacher-item__mid__rater__icon{
+  width: 104rpx;
+  height: 14rpx;
+
+}
+.teacher-item__mid__rater__title{
+  font-size: 24rpx;
+  color: #9B9B9B;
+  margin-left: 10rpx;
+  font-weight: 500;
+}
+
+.teacher-item__right{
+  
+}
+.teacher-item__right__price{
+  color: #FFA401;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.teacher-item__right__distance{
+  font-size: 24rpx;
+  color: #9092A5;
+  text-align: right;
+  font-weight: 500;
+}
+.teacher-item__arrow-right{
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}

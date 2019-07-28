@@ -1,0 +1,14 @@
+<!--pages/timetables/timetables.wxml-->
+<import src="./header/index" />
+<import src="./address/index" />
+<import src="./courseInfo/index" />
+<import src="./payWay/index" />
+<import src="./footer/index" />
+
+<view class="container">
+  <template is="header" data="{{...orderData.teacher,lesson_quantity:orderData.lesson_quantity}}"/>
+  <template is="address" data="{{teacherId:orderData.teacher.id,address:orderData.address}}"/>
+  <template is="courseInfo" data="{{...orderData.subject,lesson_quantity:orderData.lesson_quantity}}" />
+  <template is="payWay" />
+  <template is="footer" data="{{...orderData.payment}}"/>
+</view>

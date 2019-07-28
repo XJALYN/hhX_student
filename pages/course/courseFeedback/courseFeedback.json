@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "课程反馈",
+  "usingComponents":{
+    "x-textare":"/X/textare/index"
+  }
+}

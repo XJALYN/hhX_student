@@ -1,0 +1,22 @@
+<!--pages/user/withdraw/withdraw.wxml-->
+<view>
+
+<view class="header">
+  <view class="header__title">账户</view>
+  <view class="header__subtitle">总账户</view>
+  <view class="header__account">
+    <view class="header__account__num">{{amount}}</view>
+    <view class="header__account__unit">元</view>
+  </view>
+</view>
+
+<view class="input">
+  <view class="input__unit">¥</view>
+  <input class="input__input" placeholder='请输入提现金额' bindinput='bindInputMoney' value='{{depositAmount}}' type='digit' placeholder-style='font-size:28rpx;color:#d8d8d8'></input>
+  <view class="input__all" bindtap='bindTapAll'>全部</view>
+</view>
+<view wx:if="{{depositAmount == ''}}" class="btn-withdraw btn-withdraw--disable" bindtap='bindToWithdraw'>提现</view>
+<view wx:else class="btn-withdraw" bindtap='bindToWithdraw'>提现</view>
+<view class="tip">极速到账至微信零钱(每天限两次)</view>
+
+</view>

@@ -1,0 +1,9 @@
+/* pages/login/login.wxss */
+.btn-login{
+  margin-top: 100px;
+  width: calc(100% - 60rpx);
+  height: 88rpx;
+  line-height: 88rpx;
+  background: rgb(0,187,51);
+  color: white;
+}

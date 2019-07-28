@@ -1,0 +1,41 @@
+<!--pages/courseRecord/courseRecord.wxml-->
+<import src="./receivemessage/index" />
+<import src="./vediomessage/index" />
+<import src="./header/index" />
+<import src="./sendMessage/index" />
+<import src="./clock/index" />
+<import src="./endMessage/index" />
+<view>
+ 
+   <template is="header" data="{{avatar_url,nick_name,subject_name}}"/>
+   <block wx:for="{{list}}" wx:key="{{index}}">
+     
+     <!-- 大纲 -->
+    <template wx:if="{{item.message_type==1}}" is="receiveMessage" data="{{item}}"/>
+    <!-- 录屏 -->
+    <template wx:if="{{item.message_type==2}}" is="vedioMessage" data="{{item}}"/>
+
+    <!-- 打卡异常 -->
+     <template wx:if="{{item.message_type==3}}" is="clockIn" data="{{item}}" />
+    
+    <!-- 调换课程 -->
+    <template wx:if="{{item.message_type==4}}" is="sendMessage" data="{{item}}"/>
+    <!-- 课程结束 -->
+    <template wx:if="{{item.message_type==5}}" is="endMessage" data="{{item}}"/>
+
+    <!-- 课程反馈 -->
+    <template wx:if="{{item.message_type==6}}" is="sendMessage" data="{{item}}"/>
+    <!-- 课程回复 -->
+    <template wx:if="{{item.message_type==7}}" is="receiveMessage" data="{{item}}"/>
+    
+    
+   </block>
+  
+
+   <view style='height:60rpx;'></view>
+   <!-- <view class="footer">
+     <view class="footer__btn--feedback">反馈</view>
+     <view class="footer__line"></view>
+     <view class="footer__btn--leave">请假</view>
+   </view> -->
+</view>

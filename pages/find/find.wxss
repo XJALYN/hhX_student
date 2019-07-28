@@ -1,0 +1,63 @@
+/* pages/find/find.wxss */
+
+
+.find{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   padding-left: 15px;
+   padding-right: 15px; 
+   box-sizing: border-box;
+}
+.cell{
+ display: flex;
+ height: 44px;
+ width: 100%;
+ align-items: center;
+
+ box-sizing: border-box;
+ font-size: 30rpx;
+ color: rgb(50,50,50);
+}
+.cell-title{
+
+}
+.cell-detail{
+  margin-left: 10px;
+}
+.cell-arrow-right{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.header-image{
+  width: 100%;
+  height: 113px;
+  background-color: rgb(200,200,200);
+}
+.list-item{
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgb(240,240,240);
+  
+}
+.list-item-cover{
+  width: 138px;
+  height: 90px;
+  margin-bottom: 5px;
+  background-color: rgb(200,200,200);
+
+}
+.list-item-left{
+  margin-left: 10px;
+}
+.list-item__course-name{
+  font-size: 17px;
+  color: rgb(50,50,50);
+}
+.list-item__nickname{
+  font-size: 15px;
+  color: rgb(100,100,100);
+}

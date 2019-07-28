@@ -1,0 +1,25 @@
+<!--pages/user/certification/certification.wxml-->
+<view>
+<view class="title">{{real_name}} {{identified_card_number}}</view>
+<view class="group-title">身份认证</view>
+<view class="image-group">
+  <image class="image" src='{{opposite_image_url}}'></image>
+  <image class="image" src='{{positive_image_url}}'></image>
+</view>
+<view class="line"></view>
+<view class="item">
+   <view class="item__title">申请时间</view>
+   <view class="item__value">2018-07-29 15:57:00</view>
+</view>
+
+<view class="item">
+   <view class="item__title">审核状态</view>
+   <view class="item__reason">（审核申请之后24小时内会有结果)</view>
+   <view class="item__value item__value--active" wx:if="{{certified_status==0}}">审核中</view>
+      <view class="item__value item__value--active" wx:if="{{certified_status==1}}">已认证</view>
+      <view class="item__value item__value--active" wx:if="{{certified_status==2}}">认证失败</view>
+</view>
+
+<view class="btn btn-gradient-bg-color" wx:if="{{certified_status==2}}" bindtap='bindPushToBindPhone'>重新认证</view>
+<view class="btn btn-gradient-bg-color" wx:if="{{certified_status==1}}" bindtap='bindPushToTearcherList'>去下单</view>
+</view>

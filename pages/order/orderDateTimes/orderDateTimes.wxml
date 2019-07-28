@@ -1,0 +1,13 @@
+<!--pages/courseDateTimes/courseDateTimes.wxml-->
+<import src="./timeList/index" />
+<import src="./nextWeek/index" />
+<import src="./nextWeekResult/index" />
+<view>
+  <xj-calendar selectedDates="{{selectedDates}}" avaliableDates="{{avaliableDates}}"  bindSelectedDate="bindSelectedDate" monthNum="3" bindSelectedMonth="bindSelectedMonth" single="{{showSingleDate}}"/>
+  <template wx:if="{{showSingleDate}}" is="timeList" data="{{times}}"/>
+  <view  wx:if="{{showSingleDate}}" class="btn--confirm" bindtap='bindConfirmTimes'>确认</view>
+  <template is="nextWeek" data="{{show:showNextWeek}}"/>
+  <template is="nextWeekResult" data="{{show:showNextWeekResult}}"/>
+
+  <view  wx:if="{{!showSingleDate}}" class="btn--confirm" bindtap='bindPushToOrder'>下一步</view>
+</view>

@@ -1,0 +1,70 @@
+<!--components/XJCalendar/XJCalendar.wxml-->
+<view class="item">
+
+ <!-- 月份 -->
+ <view class="month-list">
+   <block wx:for="{{monthList}}" wx:key="{{index}}">
+     <view class="month {{selectedMonthIndex==index?'month-selected':''}}" bindtap='bindSelectedMonth' data-value='{{item}}' data-index='{{index}}'>{{item.month}}月  </view>
+   </block>
+ </view>
+
+ <!-- 星期 -->
+ <view wx:if="{{!single}}" class="week-list">
+  <view class="week" wx:for="{{weekList}}" wx:key="{{index}}">{{item}}</view>
+ </view>
+
+
+ <!-- 日期列表 -->
+ <view wx:if="{{!single}}" class="day-list">
+   <view class="day" wx:for="{{empytGrids}}" wx:key="{{index}}"></view>
+   <block  wx:for="{{dates}}" wx:key="{{monthNum}}{{index}}">
+    <!-- 可选的课程 -->
+    <view wx:if="{{item.available}}" class="day {{item.selected?'day-active':''}} {{item.day==userSelectedDate.day? 'day-selected':''}}  " bindtap='bindSelectedDay' data-value='{{item}}'>
+     {{item.day}}
+     <text class="luarn">{{item.holiday?item.holiday:item.lunarDay}}</text>
+     <view wx:if="{{item.day==userSelectedDate.day}}" class="day-bg-selected"></view>
+    </view >
+
+    <!-- 不可选的课程 -->
+    <view wx:if="{{!item.available}}" class="day day-avaliable">
+      {{item.day}}
+      <text class="luarn">{{item.holiday?item.holiday:item.lunarDay}}</text>
+    </view>
+   </block>
+   <view class="day" wx:for="{{lastEmptyGrids}}" wx:key="{{index}}"></view>
+ </view>
+
+ <view class="single-date"  wx:if="{{single}}">
+     <view class="day-list-single-left"></view>
+    <view class="day-list-single-right"></view>
+    <scroll-view disable="true" scroll-x class="day-list-single" scroll-with-animation="false" scroll-into-view="s{{scrollIntoView}}">
+
+   <view class="day-s" wx:for="{{empytGrids}}" wx:key="{{index}}" >
+   <view class="day"></view>
+   </view>
+
+   <view class="day-s"  wx:for="{{dates}}" wx:key="{{monthNum}}{{index}}" id="s{{item.day}}">
+    <!-- 可选的课程 -->
+    <view class="day-week">{{weekList[item.week]}}</view>
+    <view wx:if="{{item.available}}" class="day {{item.selected?'day-active':''}} {{item.day==userSelectedDate.day? 'day-selected':''}} " bindtap='bindSelectedDay' data-value='{{item}}'>
+     {{item.day}}
+     <text class="luarn">{{item.holiday?item.holiday:item.lunarDay}}</text>
+     <view wx:if="{{item.day==userSelectedDate.day}}" class="day-bg-selected"></view>
+    </view >
+
+    <!-- 不可选的课程 -->
+    <view wx:if="{{!item.available}}" class="day day-avaliable">
+      {{item.day}}
+      <text class="luarn">{{item.holiday?item.holiday:item.lunarDay}}</text>
+    </view>
+   </view>
+
+   <view class="day-s" wx:for="{{lastEmptyGrids}}" wx:key="{{index}}">
+     <view class="day"></view>
+   </view>
+ </scroll-view>
+ </view>
+
+
+
+</view>

@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<import src="./teacherItem/index" />
+<import src="./banner/index" />
+<import src="./cityArea/index"/>
+<import src="./locationAuthor/index" />
+<view>
+
+<!-- banner 图片 -->
+<template is="banner" data="{{banners}}"/>
+
+<!-- 兴趣培训 -->
+<view class="course-type-row">
+   <view class="course-type" bindtap='bindPushToTeacherList'>课业辅导</view>
+</view>
+
+<!-- 城市分布展示 -->
+
+<template is="cityArea" data="{{cityList}}"/>  
+
+
+
+
+<view class="group-title">精品老师</view>
+
+<view class="teacher-list">
+
+<template is="locationAuthor"  wx:if="{{!userLocationAuthorize}}"/>
+
+ <block wx:if="{{userLocationAuthorize}}">
+  <block wx:for="{{teacherList}}" wx:key="{{index}}">
+    <template is="teacherItem" data="{{item}}"></template>
+  </block>
+
+ </block>
+</view>
+
+</view>

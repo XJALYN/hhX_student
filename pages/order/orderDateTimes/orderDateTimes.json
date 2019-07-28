@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "请设置授课时间表",
+  "disableScroll":true,
+  "usingComponents": {
+    "xj-calendar": "../../../components/XJCalendar/XJCalendar"
+  }
+}

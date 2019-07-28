@@ -1,0 +1,22 @@
+<template name="teacherItem">
+
+  <cover-view class="teacher-item" bindtap='bindPushToTeacherDetail'>
+    <cover-image class="teacher-item__avatar"></cover-image>
+    <cover-view class="teacher-item__mid">
+      <cover-view class="teacher-item__mid__nickname">老师姓名</cover-view>
+      <cover-view class="teacher-item__mid__school">清华大学/200小时</cover-view>
+      <cover-view class="teacher-item__mid__rater">
+         <cover-image class="teacher-item__mid__rater__icon" src='/images/index_star.png'> </cover-image>
+         <cover-view class="teacher-item__mid__rater__title">3.4</cover-view>
+      </cover-view>
+    </cover-view>
+
+    <cover-view style='flex:1'></cover-view>
+    <cover-view class="teacher-item__right">
+      <cover-view class="teacher-item__right__price">¥199起</cover-view>
+      <cover-view class="teacher-item__right__distance">12公里</cover-view>
+    </cover-view>
+    <cover-image class="teacher-item__arrow-right" src="/images/arrow_right.png"></cover-image>
+  </cover-view> 
+
+</template>

@@ -1,0 +1,26 @@
+<!--pages/find/find.wxml-->
+<view class="find">
+<view class="cell">
+ <view class="cell-title">07/01</view>
+ <view class="cell-detail">今日课程推荐</view>
+ <view style='flex:1'></view>
+ <image class="cell-arrow-right" src="/public/images/arrow_right.png"></image>
+</view>
+<image class="header-image"></image>
+<view class="list-item">
+  <image class="list-item-cover"></image>
+  <view class="list-item-left">
+    <view class="list-item__course-name">少儿英语专辑</view>
+    <view class="list-item__nickname">用户名</view>
+  </view>
+</view>
+
+<view class="list-item">
+  <image class="list-item-cover"></image>
+  <view class="list-item-left">
+    <view class="list-item__course-name">少儿英语专辑</view>
+    <view class="list-item__nickname">用户名</view>
+  </view>
+</view>
+
+</view>

@@ -1,0 +1,13 @@
+<!--pages/recharge/recharge.wxml-->
+
+<view class="recharge">
+<view class="title">充值金额</view>
+ <view class="input">
+  <label class="input__title">¥</label>
+  <input class="input__value" placeholder='100' type='digit' value='{{fee}}' bindinput='bindInputFee' placeholder-style='color:#C8C8C8'></input>
+ </view>
+ <view wx:if="{{fee != ''}}" class="btn-recharge" bindtap='bindRecharge'>充值</view>
+
+ <view wx:else class="btn-recharge  btn-recharge-disable">充值</view>
+ 
+</view>

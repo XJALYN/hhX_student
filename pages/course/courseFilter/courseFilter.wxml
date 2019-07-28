@@ -1,0 +1,22 @@
+<!--pages/courseFilter/courseFilter.wxml-->
+
+<view class="course-filter">
+  <image class="banner" src="http://img4.imgtn.bdimg.com/it/u=688216177,3274277559&fm=27&gp=0.jpg"></image>
+  <view class="top-tip">请选择一门课</view>
+
+  <view class="list">
+    <view class="couse-item" wx:for="{{list}}">
+      <view wx:if="{{index!=listIndex}}" class="couse" bindtap='bindSelectedCouse' data-index='{{index}}'>
+        {{item}}
+      </view>
+     <view wx:if="{{index==listIndex}}" class="couse couse--selected">
+      {{item}}
+     </view>
+      
+      
+    </view>
+    
+  </view>
+
+  <view class="btn-next" bindtap='bindPushToTeacherList'>开始选老师</view>
+</view>

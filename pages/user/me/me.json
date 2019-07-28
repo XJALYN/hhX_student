@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#ffffff",
+  "enablePullDownRefresh": false,
+  "backgroundTextStyle": "dark",
+  "usingComponents":{
+    "x-imageloader":"/X/imageloader/index",
+    "x-badge":"/X/badge/index"
+  }
+}

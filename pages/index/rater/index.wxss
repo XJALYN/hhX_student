@@ -1,0 +1,38 @@
+/* pages/teacherList/rater/index.wxss */
+.rater{
+  display: flex;
+  align-items: center;
+}
+.rater__star{
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(220,220,220);
+}
+.rater__star--active{
+    margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: yellow;
+}
+.rater__star-percent-25{
+    margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: purple;
+
+}
+.rater__star-percent-50{
+    margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: purple;
+
+}
+.rater__star-percent-75{
+    margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: purple;
+
+}

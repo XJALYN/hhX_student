@@ -1,0 +1,34 @@
+<!--pages/help/help.wxml-->
+<view class="container">
+ 
+   <view class="menu-list">
+
+     <button class="" plain style='display: flex;align-items: center;height: 50px;border-radius: 2px;justify-content: flex-end;border-style: none;background: rgb(255,248,249);margin-left:30rpx;' open-type="contact" send-message-title="亲,我有问题要咨询">
+       <image class="menu-icon" src="/images/help/icon_contact.png"></image>
+      <view class="menu-title menu-title-left">我要咨询</view>  
+      <image class="arrow_right" src="/images/arrow_right.png"></image>
+     </button>
+
+      <button style=' display: flex;align-items: center;height: 50px;border-radius: 2px;justify-content: center;border-style: none;justify-content: flex-end;background: rgb(255,249,237);margin-right:30rpx;' plain open-type="contact" send-message-title="亲,我有问题要反馈">
+        <image class="menu-icon" src="/images/help/icon_idea.png"></image>
+        <view class="menu-title menu-title-right">我要反馈</view>  
+        <image class="arrow_right" src="/images/arrow_right.png"></image>
+     </button>
+   </view>
+
+  <view class="line"></view>
+  <view class="add_wx" bindtap='bindCopyWx'>客服妹妹微信:tian3315jesther(单击复制)</view>
+   <!-- <view class="item" bindtap='bindPushToHelpCenter'>
+   <view class="title">上课流程说明</view>
+   <view style='flex:1'></view>
+   <image class="arrow_right" src="/images/arrow_right.png"></image>
+  </view> -->
+ 
+
+
+
+ 
+
+
+
+</view>

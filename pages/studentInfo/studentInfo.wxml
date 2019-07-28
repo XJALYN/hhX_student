@@ -1,0 +1,44 @@
+<!--pages/studentInfo/studentInfo.wxml-->
+<view class="student-info">
+<view class="item">
+  <view class="title">年级</view>
+  <view style='flex:1'></view>
+  <view class="value">小学一年级</view>
+  <image class="arrow-right" src="../../public/images/arrow_right.png" ></image>
+  
+</view>
+
+<view class="item">
+  <view class="title">补课科目</view>
+  <view style='flex:1'></view>
+  <view class="value">语文</view>
+  <image class="arrow-right" src="../../public/images/arrow_right.png" ></image>
+</view>
+
+ <view class="item">
+   <view class="title">学校</view>
+    <input class="school" placeholder='孩子所在的学校(选填)'></input> 
+    
+ </view>
+
+<view class="item">
+  <view class="title">考试成绩</view>
+   <input placeholder='填写最近的'></input> 
+ </view>
+
+ <view class="group-item">
+   找家教的目的(可多选)
+ </view>
+
+ <view class="list">
+   <view class="title">升学冲刺</view>
+   <view class="title">成绩提高</view>
+   <view class="title">辅导作业</view>
+   <view class="title">培养学习兴趣</view>
+ </view>
+
+ <view class="tip">请认真填写以上信息,大数据帮您推荐最合适的老师!</view>
+
+<view class="btn-next" bindtap='bindPushToNext'>下一步</view>
+
+</view>

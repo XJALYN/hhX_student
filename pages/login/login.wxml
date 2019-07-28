@@ -1,0 +1,6 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+
+<button class="btn-login" open-type='getUserInfo' bindgetuserinfo="bindGetUserinfo" loading='{{loading}}'>微信授权登录</button>
+
+</view>

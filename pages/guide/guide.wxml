@@ -1,0 +1,14 @@
+<!--pages/guide/guide.wxml-->
+<import src="./poster/index"/>
+<view wx:if="{{showGuide}}">
+  <swiper class="swiper" bindchange='bindChange'>
+    <swiper-item wx:for="{{list}}" wx:key="{{index}}">
+       <template is="poster" data="{{...item}}"/>
+    </swiper-item>
+  </swiper>
+  <view class="dot-list" wx:if="{{activeIndex<list.length-1}}">
+    <view class="{{index==activeIndex?'dot-active':'dot'}}" wx:for="{{list}}" wx:key="{{index}}"></view>
+  </view>
+  <button class="btn--enter btn-gradient-bg-color animated slideInUp" open-type='getUserInfo' bindgetuserinfo="bindGetUserinfo" wx:else loading='{{loading}}'>立即体验</button>
+
+</view>

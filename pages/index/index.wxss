@@ -1,0 +1,81 @@
+/**index.wxss**/
+@import "./banner/index";
+@import "./teacherItem/index.wxss";
+@import "./cityArea/index";
+@import "./locationAuthor/index";
+
+
+
+
+
+
+
+.course-type-row{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+
+  align-content: center;
+  
+}
+.course-type{
+  
+  height: 104rpx;
+  line-height: 104rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  width: calc(100% - 60rpx);
+  font-weight: 500;
+  font-size: 36rpx;
+  background: -webkit-linear-gradient(left, #FFA466 , #EE3434); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #FFA466, #EE3434); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #FFA466, #EE3434); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #FFA466 , #EE3434); /* 标准的语法 */
+  color: white;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.course-type-bottom{
+  width: calc(100% - 20px);
+  margin-top: 10px;
+  height: 80px;
+  line-height: 80px;
+  border: 1px solid rgb(220,220,220);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.group-title{
+  margin-top: 20rpx;
+  height: 40px;
+  line-height: 40px;
+  font-size: 36rpx;
+  margin-left: 30rpx;
+  color: black;
+  text-align: left;
+  width: calc(100% - 60rpx);
+  font-weight: 500;
+}
+
+.teacher-list{
+
+}
+
+
+.btn-location{
+  height: 44px;
+  line-height: 44px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 15px;
+  text-decoration: underline;
+  color: rgb(150,150,150);
+}
+
+
+
+
+

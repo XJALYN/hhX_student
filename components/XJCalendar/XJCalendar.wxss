@@ -1,0 +1,153 @@
+/* components/XJCalendar/XJCalendar.wxss */
+
+.month-list{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+
+  padding-left: 170rpx;
+  padding-right: 170rpx;
+  box-sizing: border-box;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(240,240,240);
+}
+
+.month{
+  font-size: 32rpx;
+  border-bottom:6rpx solid white;
+  text-align: center;
+  color: #010101;
+  line-height: 68rpx;
+}
+
+.month-selected{
+   font-size: 32rpx;
+  border-bottom: 6rpx solid #FF6D10;
+  line-height: 68rpx;
+  font-weight: 500;
+  text-align: center;
+  color: #FF6D10;
+}
+
+.week-list{
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 28rpx;
+  color: #9B9B9B;
+}
+.week{
+  flex: 1;
+  text-align: center;
+}
+.day-list{
+  margin-top: 10px;
+  display: flex;
+  font-size: 15px;
+  color: rgb(100,100,100);
+  flex-wrap: wrap;
+}
+.single-date{
+  position: relative;
+  overflow: hidden;
+}
+.day-list-single{
+   white-space: nowrap;  
+   width: 100%; 
+   display: flex; 
+   margin-top: 35rpx;
+   position: relative;
+}
+.day-list-single-left{
+  position: absolute;
+  width: 20rpx;
+  left: 0px;
+  bottom: 0px;
+  top: 0px;
+  background-color: white;
+  box-shadow: 20rpx 0px 20rpx rgba(255,255,255,0.1);
+  z-index: 10;
+  
+}
+.day-list-single-right{
+   position: absolute;
+  width: 40rpx;
+  box-shadow: -20rpx 0px 20rpx rgba(255,255,255,0.1);
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: white;
+  z-index: 10;
+}
+
+.day-s{
+  display: inline-block;
+}
+.day-week{
+  color: #9B9B9B;
+  font-size: 28rpx;
+  text-align: center;
+  margin-bottom: 38rpx;
+}
+
+.day{
+  width: 107.5rpx;
+  min-height: 107.5rpx;
+  text-align: center;
+  font-weight: 500;
+  font-size: 32rpx;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+
+.day-bg-selected{
+ position: absolute;
+ top: 0px;
+ right: calc(50% - 26rpx);
+ bottom: 0px;
+ width: 54rpx;
+ background-color: #5E25ED;
+ z-index: -1;
+ border-radius: 26rpx;
+}
+
+.luarn{
+  font-size: 24rpx;
+  font-weight: normal;
+}
+
+
+
+.day-couse{
+  color: rgb(250,0,0);
+}
+
+.day-choosed{
+  background-color: #5E25ED;
+  color: white;
+  border-radius: 50%;
+}
+.day-active{
+  color: #5E25ED;
+}
+
+.day-avaliable{
+  color: #9B9B9B;
+  background: white;
+}
+
+.last-day-color{
+  color:rgb(158,158,158);
+}
+
+.day-selected{
+ color: white;
+}

@@ -1,0 +1,57 @@
+/* pages/courseRecord/courseRecord.wxss */
+@import "./receivemessage/index.wxss";
+@import './vediomessage/index.wxss';
+@import "./courseheader/index.wxss";
+@import "./header/index";
+@import "./courseTime/index";
+@import "./sendMessage/index";
+@import "./clock/index" ;
+@import "./endMessage/index";
+
+
+
+.group-title{
+  margin-top: 30rpx;
+  font-size: 36rpx;
+  margin-left: 30rpx;
+  color: #010101;
+  font-weight: 600;
+}
+
+
+.footer{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 93rpx;
+  line-height: 93rpx;
+  text-align: center;
+  background-color: white;
+  border-top: 1px solid rgb(240,240,240);
+  display: flex;
+  align-items: center;
+}
+.footer__line{
+  width: 1px;
+  height: 93rpx;
+  background-color: #D8D8D8;
+}
+.footer__btn--feedback{
+  height: 93rpx;
+  line-height: 93rpx;
+  flex:1;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight:600;
+
+}
+.footer__btn--leave{
+  height: 93rpx;
+  line-height: 93rpx;
+  flex:1;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight:600;
+}

@@ -1,0 +1,28 @@
+<!--pages/courseRecord/courseRecord.wxml-->
+<import src="./receivemessage/index" />
+<import src="./vediomessage/index" />
+<import src="./courseheader/index"/>
+<import src="./header/index" />
+<import src="./courseTime/index" />
+<view>
+
+  <template is="header" data="{{course}}"/>
+
+  <view class="group-title">上课时间</view>
+  <block wx:for="{{course.teaching_times}}" wx:key="{{index}}">
+    <template is="courseTime" data="{{item:item}}"/>
+  </block>
+  
+  
+  
+   <view class="group-title">课程反馈</view>
+   <block wx:for="{{lessons}}" wx:key="{{index}}">
+      <template is="courseHeader" data="{{title:item.index,date:item.teaching_datetime}}"/>
+      <block wx:for="{{item.messages}}" wx:key="{{index}}">
+          <template is="receiveMessage" data="{{...item}}"/>
+      </block>
+   </block>
+<!-- 
+   <template is="vedioMessage"/> -->
+
+</view>

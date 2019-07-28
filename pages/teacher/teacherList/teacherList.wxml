@@ -1,0 +1,33 @@
+<!--pages/techerList/techerList.wxml-->
+<import src="./teacherItem/index" />
+<import src="./filterSubject/index" />
+<import src="./header/index" />
+<import src="./locationAuthor/index" />
+<view class="teacherList">
+
+  <!-- 筛选科目 -->
+  <!-- <template wx:if="{{isShowFilterContainer}}" is="filterSubject"  data="{{stageList,stageIndex,gradeIndex}}"/> -->
+  
+  <template wx:if="{{userLocationAuthorize&&stageList.length>0}}" is="header" data="{{address,cityIndex,stageList,stageIndex,gradeIndex,subjects,subjectIndex,pickerList}}"/>
+
+
+ 
+
+  <!-- 老师列表 -->
+  <view wx:if="{{userLocationAuthorize}}" class="list animated fadeIn">
+  <block  wx:for="{{teacherList}}" wx:key="{{index}}">
+    <template is="teacherItem" data="{{...item}}"/>
+  </block>
+  </view>
+
+ <!-- 如果用户不允许授权请展示这个 -->
+  <view wx:if="{{!userLocationAuthorize}}" style='margin-top:300rpx'>
+     <template is="locationAuthor" />
+  </view>
+
+
+    <button loading='{{loadingMore}}' plain='true' style='border-style:none'></button>
+    <view class="h6 text-info" wx:if="{{noMore}}">别拉了,没有了</view>
+  <!-- 无老师时显示 -->
+  <x-error wx:if="{{teacherList.length==0&&stageList.length >0}}" title="周围未搜索到此科目老师~" style="margin-top:100px;"></x-error>
+</view>

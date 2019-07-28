@@ -1,0 +1,22 @@
+/* pages/courseFeedback/courseFeedback.wxss */
+
+.course-input{
+  margin-top: 0px;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  font-size: 30rpx;
+}
+
+.btn--feedback{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 92rpx;
+  line-height: 92rpx;
+  text-align: center;
+  border-top: 1px #D8D8D8 solid;
+  color: #010101;
+  font-size: 28rpx;
+  font-weight: bold;
+}

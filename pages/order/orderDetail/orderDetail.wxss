@@ -1,0 +1,23 @@
+/* pages/orderDetail/orderDetail.wxss */
+@import "./header/index";
+@import "./courseInfo/index";
+@import "./address/index";
+@import "./orderInfo/index";
+
+.btn-pay{
+  width: calc(100% - 80rpx);
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background-color: #FF6D10;
+  color: white;
+  font-size: 28rpx;
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+  margin-bottom: 40rpx;
+  border-radius: 4rpx;
+}
+.btn-pay--disable{
+  background: #efefef;
+  color:#4A4A4A;
+}

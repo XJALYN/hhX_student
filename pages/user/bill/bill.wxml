@@ -1,0 +1,15 @@
+<!--pages/bill/bill.wxml-->
+<import src="./filter/index" />
+<import src="./cell/index" />
+<view class="bill">
+<template is="filter" data="{{showDate:showDate,endDate,outlay_amount,income_amount}}"/>
+
+<block wx:for="{{list}}" wx:key="{{index}}">
+   <template is="cell" data="{{item}}" />
+</block>
+
+
+ <x-error wx:if="{{list.length==0&&loaded}}" title="暂无账单">
+ </x-error>
+  <x-loadmore loading="{{loading}}" wx:if="{{list.length >= limit}}"></x-loadmore>
+</view>

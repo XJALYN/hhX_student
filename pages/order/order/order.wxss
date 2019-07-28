@@ -1,0 +1,7 @@
+/* pages/timetables/timetables.wxss */
+@import "./header/index";
+@import "./address/index";
+@import "./courseInfo/index";
+@import "./payWay/index";
+@import "./footer/index";
+

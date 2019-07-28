@@ -1,0 +1,33 @@
+<!--pages/myAccount/myAccount.wxml-->
+<view class="container">
+  <view class="header">
+   <view class="title">总金额</view>
+   <view class="header__bottom">
+   <view class="header__bottom__title">{{balance}}</view>
+   <view class="header__bottom__unit">元</view>
+   </view>
+  </view>
+
+
+
+  <view class="item" bindtap='bindPushToBill'>
+   <view class="title">账单</view>
+   <view style='flex:1'></view>
+   <image class="arrow-right" src="/images/arrow_right.png"></image>
+  </view>
+  <view class="line"></view>
+
+   <view class="item" bindtap='bindPushToRecharge'>
+   <view class="title">充值</view>
+   <view style='flex:1'></view>
+   <image class="arrow-right" src="/images/arrow_right.png"></image>
+  </view>
+<view class="line"></view>
+  <view class="item" bindtap='bindPushToWithdraw'>
+   <view class="title">提现</view>
+   <view style='flex:1'></view>
+   <image class="arrow-right" src="/images/arrow_right.png"></image>
+  </view>
+<view class="line"></view>
+
+</view>

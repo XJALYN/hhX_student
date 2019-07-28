@@ -1,0 +1,41 @@
+<!--pages/techerDetail/techerDetail.wxml-->
+<import src="./header/index" />
+<import src="./statistic/index" />
+<import src="./resume/index" />
+<import src="./subject/index" />
+<import src="./comment/index" />
+<import src="./order/index" />
+<import src="./courseSelected/index" />
+<view wx:if="{{loaded}}">
+   
+   <!-- 老师详情 -->
+  <template  is="header" data="{{teacher:teacher}}" />
+
+  <!-- 统计 -->
+  <template is="statistic" data="{{teacher,overall_score:overall_score}}" />
+  <view   class='line animated fadeIn'></view>
+
+ 
+  <!-- 授课科目 -->
+  <template  is="subject" data="{{subjectList}}" />
+  <view  class='line' ></view>
+  <!--  简介-->
+  <template wx:if="{{teacher.resume.honors.length > 0 }}" is="resume" data="{{teacher}}" />
+  <view wx:if="{{teacher.resume.honors.length > 0 }}" class='line' ></view>
+
+
+  <!-- 最后的评论  -->
+  <template  is="comment" data="{{lastRating,order_rating_quantity}}" />  
+
+  <view class="line animated fadeIn" ></view>
+  <view class="group-title animated fadeIn" >须知</view>
+  <view class="group-content animated fadeIn" >为了保证你的资金安全,所有费用需要通过平台支付,不可线下支付
+  </view>
+
+  <view style='height:140rpx'></view>
+  <!-- 预约按钮 -->
+  <template  is="order" data="{{teacher}}" />
+
+  <!-- 课程选择 -->
+  <template is="courseSelected" data="{{show:showCourseSelected,courses,courseIndex}}" />
+</view>

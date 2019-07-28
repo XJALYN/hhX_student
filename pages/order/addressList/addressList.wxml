@@ -1,0 +1,19 @@
+<!--pages/addressList/addressList.wxml-->
+
+<import src="./cell/index" />
+
+<view class="container">
+
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <template is="cell" data="{{item}}"/>
+  </block>
+  
+  <x-error wx:if="{{list.length ==0 &&loaded==true}}" title="暂无地址"></x-error>
+
+ <!-- 新增地址按钮  -->
+ <view class="btn-add-container" bindtap='bindPushToAddAddress'>
+ <view class="add-title">添加新地址</view>
+  <image class="add-icon" src="/images/address_add.png"></image>
+  
+ </view>
+</view>

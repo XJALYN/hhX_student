@@ -1,0 +1,21 @@
+/* pages/courseDateTimes/courseDateTimes.wxss */
+@import "./timeList/index";
+@import "./nextWeek/index";
+@import "./nextWeekResult/index";
+.btn--confirm{
+  position: fixed;
+  bottom: 30rpx;
+  background-color: #FF6D10;
+  color: white;
+  font-size: 28rpx;
+  text-align: center;
+  height: 70rpx;
+  margin-left: 30rpx;
+  width: calc(100% - 60rpx);
+  line-height: 70rpx;
+  border-radius: 35rpx;
+  font-weight:500;
+}
+.btn--confirm :active{
+  opacity: 0.7;
+}

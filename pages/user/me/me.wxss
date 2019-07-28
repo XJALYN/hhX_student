@@ -1,0 +1,153 @@
+/* pages/me/me.wxss */
+@import "./orderMenu/index";
+
+.me{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  font-size: 32rpx;
+}
+
+.me .top-view{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  height: 180rpx;
+}
+
+.me .top-view .avator{
+  margin-left: 40rpx;
+  width: 120rpx;
+  height: 120rpx;
+  max-width: 120rpx;
+  max-height: 120rpx;
+  border-radius: 60rpx;
+  background-color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.me .top-view .left-view{
+  margin-left: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.me .top-view .left-view .username{
+  font-size: 32rpx;
+  margin-left: 5px;
+  color: #010101;
+  font-weight:500;
+}
+.edit-tip{
+  margin-left: 5px;
+  font-size: 28rpx;
+  margin-top: 5px;
+  color: #9B9B9B;
+}
+
+.me .top-view .left-view .status-reviewing{
+  margin-top: 5px;
+  color: white;
+  font-size: 12px;
+  background: rgb(200,200,200);
+  width: fit-content;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding: 2px 5px;
+}
+
+.me .top-view .left-view .status-press{
+  margin-top: 5px;
+  color: white;
+  font-size: 12px;
+  background: rgb(0,203,50);
+  width: fit-content;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding: 2px 5px;
+}
+
+.me .top-view .btn-arrow{
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+.me .list{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.me .list .item{
+ 
+ margin-top: 60rpx;
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ background: white;
+ align-items: center;
+
+}
+picker{
+  width: 100%;
+}
+.me .list .value{
+  color: #9B9B9B;
+  font-size: 24rpx;
+  margin-right: 10rpx;
+ 
+}
+button::after{
+  border: none;
+}
+
+
+
+.me .list .item .icon{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 30rpx;
+  outline-style: none;
+  margin-right: 30rpx;
+}
+.me .list .item .title{
+  color: #010101;
+  font-size: 32rpx;
+  font-weight:500;
+}
+.me .order-num{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.me .list .item .arrow-right{
+  margin-right: 30rpx;
+  width: 10px;
+  height: 10px;
+}
+
+

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "猴猴学",
+  "usingComponents":{
+    "x-rater":"./rater/index"
+  }
+}

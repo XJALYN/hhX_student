@@ -1,0 +1,9 @@
+<!--pages/updateNickName/updateNickName.wxml-->
+
+<view class="update-nickname">
+  <view class="item">
+    <input class="input" placeholder='请输入姓名' bindinput='bindInput' value='{{nickname}}'></input>
+    <button class="btn-save" plain='true' bindtap='bindSave'>保存</button>
+  </view>
+  <view class="line"></view>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/commentTeacherList/commentTeacherList.wxml-->
+<import src="./header/index" />
+<import src="./rate/index" />
+<import src="./cell/index" />
+
+<view class="comment-teacher-list">
+
+ <view class="comment-star">
+   <view class="comment-star__title">{{rateSet.order_rating_quantity}}条评价</view>
+   <template is='header' data="{{value:rateSet.overall_score}}"/>
+   <template is="rate" data="{{title:'授课内容',value:rateSet.teaching_content_score}}"/>
+   <template is="rate" data="{{title:'授课态度',value:rateSet.teaching_attitude_score}}"/>
+   <template is="rate" data="{{title:'授课思路',value:rateSet.teaching_thought_score}}"/>
+   <template is="rate" data="{{title:'授课进度',value:rateSet.teaching_effect_score}}"/>
+
+ </view>
+
+  <view class="line"></view>
+  <block wx:for="{{commentList}}" wx:key="{{index}}">
+    <template is="cell" data="{{index,item}}"/>
+  </block>
+   <x-loadmore wx:if="{{commentList.length >= limit}}" loading="{{!noMore}}"></x-loadmore>
+</view>

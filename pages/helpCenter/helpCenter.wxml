@@ -1,0 +1,10 @@
+<!--pages/helpCenter/helpCenter.wxml-->
+
+<view class="container">
+ <block wx:for="{{questions}}">
+ <view class="question">{{item.answer}}</view>
+ <view class="answer">{{item.question}}</view>
+ </block>
+
+
+</view>

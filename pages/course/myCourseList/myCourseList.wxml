@@ -1,0 +1,17 @@
+<!--pages/course/course.wxml-->
+<import src="./tabs/index" />
+<import src="./cell/index" />
+
+<view class="container">
+  <template is="tabs" data="{{tabs,activeIndex}}"/>
+  <view style='height:120rpx;'></view>
+
+   <x-error wx:if="{{list.length==0&&loaded}}" title="暂无课程">
+  </x-error>
+  <block wx:for="{{list}}" wx:key="{{index}}">
+       <template is="cell" data="{{item}}"/>
+  </block>
+
+  <x-loadmore  wx:if="{{list.length>=limit}}" loading="{{!noMore}}" />
+  
+</view>

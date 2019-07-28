@@ -1,0 +1,29 @@
+<!--pages/orderPay/orderPay.wxml-->
+<view class="container">
+<view class="header-container">
+  <view class="header-container__title">剩余支付时间14:39</view>
+  <view class="header-container__account">¥{{account}}元</view>
+  <view class="header-container__title">{{nick_name}}/{{subject_name}}</view>
+</view>
+<view class="pay-way-container">
+   <view class="pay-way-item" bindtap='bindSelectedPayWay' data-value='{{0}}'>
+     <image class="pay-way-item__icon" src='/images/pay_wx.png'></image>
+     <view class="pay-way-item__title">微信支付</view>
+     <view style='flex:1'></view>
+     <icon wx:if="{{payWay==0}}" class="pay-way-item__status-icon"  type="success" size="20" color="#FF6D10"></icon>
+     <icon wx:else class="pay-way-item__status-icon"  type="success" size="20" color="lightgray"></icon>
+   </view>
+    <view class="pay-way-item" bindtap='{{balanceEnough?"bindSelectedPayWay":""}}' data-value='{{1}}'>
+     <image class="pay-way-item__icon" src='/images/pay_wallet.png'></image>
+     <view class="pay-way-item__title {{balanceEnough?'':'pay-way-item__title--disabled'}}">零钱支付</view>
+     <view style='flex:1'></view>
+     <icon wx:if="{{payWay==1}}" class="pay-way-item__status-icon"  type="success" size="20" color="#FF6D10"></icon>
+     <icon wx:else class="pay-way-item__status-icon"  type="success" size="20" color="lightgray"></icon>
+   </view>
+</view>
+
+<view class="pay-btn btn-gradient-bg-color" bindtap='bindPay'>
+  <view class="pay-btn__title">确认支付</view>
+  <view class="pay-btn__accoutn">¥{{account}}元</view>
+</view>
+</view>

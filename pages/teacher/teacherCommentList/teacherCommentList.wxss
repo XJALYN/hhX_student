@@ -1,0 +1,22 @@
+/* pages/commentTeacherList/commentTeacherList.wxss */
+@import "./header/index";
+@import "./rate/index";
+@import "./cell/index";
+
+.comment-teacher-list{
+  display: flex;
+  flex-direction: column;
+
+}
+.comment-star__title{
+  margin-top: 30rpx;
+  margin-left: 46rpx;
+  color: #000000;
+  font-size: 44rpx;
+  font-weight: 500;
+}
+
+.line{
+  margin-top: 20px;
+  margin-left: 30rpx;
+}

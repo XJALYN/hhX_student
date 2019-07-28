@@ -1,0 +1,97 @@
+{
+  "pages": [
+    "pages/guide/guide",
+    "pages/index/index",
+    "pages/user/certification/certification",
+    
+    "pages/webview/webview",
+    "pages/teacher/commentTeacher/commentTeacher",
+    
+    "pages/user/collectTeachers/collectTeachers",
+    "pages/user/uploadID/uploadID",
+    "pages/user/bindPhone/bindPhone",
+    
+    "pages/user/withdraw/withdraw",
+    
+    "pages/user/userInfo/userInfo",
+   
+    "pages/course/courseCenter/courseCenter",
+    "pages/address/addressList/addressList",
+    "pages/address/addAddress/addAddress",
+    "pages/address/addressUpdate/addressUpdate",
+    
+
+    "pages/user/myAccount/myAccount",
+    "pages/user/me/me",
+    "pages/user/updateNickName/updateNickName",
+    "pages/user/bill/bill",
+    "pages/user/recharge/recharge",
+
+    "pages/order/order/order",
+    "pages/order/orderDateTimes/orderDateTimes",
+    "pages/order/orderDetail/orderDetail",
+    "pages/order/myOrderList/myOrderList",
+    "pages/order/orderPaySuccess/orderPaySuccess",
+    "pages/order/orderPay/orderPay",
+    "pages/order/addressList/addressList",
+
+    "pages/course/courseRecord/courseRecord",
+    "pages/course/myCourseList/myCourseList",
+    "pages/course/courseDetail/courseDetail",
+    "pages/course/courseFeedback/courseFeedback",
+ 
+    "pages/course/courseFilter/courseFilter",
+ 
+  
+    "pages/teacher/teacherList/teacherList",
+    "pages/teacher/teacherDetail/teacherDetail",
+    "pages/teacher/teacherCommentList/teacherCommentList",
+    "pages/teacher/complaintTeacher/complaintTeacher",
+    "pages/teacher/teachingExceptionHandle/teachingExceptionHandle",
+
+    "pages/cityLocation/cityLocation",
+    "pages/find/find",
+   
+    "pages/login/login",
+    "pages/stageSelected/stageSelected",
+
+    "pages/help/help",
+    "pages/helpCenter/helpCenter",
+    "pages/studentInfo/studentInfo"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents":{
+    "x-loadmore": "/X/loadmore/index",
+    "x-error": "/X/error/index"
+  },
+  "tabBar": {
+    "selectedColor": "#FF6D10",
+    "color": "#8a8a8a",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home-hover.png"
+      },
+      {
+        "pagePath": "pages/course/courseCenter/courseCenter",
+        "text": "课程",
+        "iconPath": "/images/course.png",
+        "selectedIconPath": "/images/course-hover.png"
+      },
+      {
+        "pagePath": "pages/user/me/me",
+        "text": "我的",
+        "iconPath": "/images/me.png",
+        "selectedIconPath": "/images/me-hover.png"
+      }
+    ]
+  }
+}

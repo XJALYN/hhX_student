@@ -1,0 +1,86 @@
+.teacher-item{
+  display: flex;
+  height: 160rpx;
+  align-items: center;
+  background: white;
+  font-weight: 500;
+}
+
+.teacher-item:active{
+  background:rgba(245,245,245,1);
+}
+
+.teacher-item:active{
+ background-color: #F5F5F5;
+}
+.teacher-item__avatar{
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 46rpx;
+  margin-left: 30rpx;
+}
+.teacher-item__mid{
+  margin-left: 60rpx;
+  height: 160rpx;
+}
+.teacher-item__mid__nickname{
+  margin-top: 22rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  font-size: 32rpx;
+
+  color: #030303;
+}
+.teacher-item__mid__school{
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #4A4A4A;
+}
+.teacher-item__mid__rater{
+  height: 34rpx;
+  display: flex;
+  align-items: center;
+}
+.teacher-item__mid__rater__icon{
+  width: 104rpx;
+  height: 14rpx;
+}
+.teacher-item__mid__rater__title{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  color: #9B9B9B;
+}
+
+.teacher-item__right{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  
+}
+.teacher-item__right__price{
+  color: #FFA401;
+  font-size: 36rpx;
+  font-weight: 500;
+  height: 50rpx;
+  line-height: 50rpx;
+
+  min-width: 100px;
+
+  text-align: right;
+  
+}
+.teacher-item__right__distance{
+  font-size: 12px;
+  color: #9092A5;
+ 
+
+}
+.teacher-item__arrow-right{
+  width: 26rpx;
+  height: 30rpx;
+  margin-left: 10px;
+  margin-right: 30rpx;
+
+}

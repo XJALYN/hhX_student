@@ -1,0 +1,8 @@
+<!--pages/orderPaySuccess/orderPaySuccess.wxml-->
+<view class="container">
+
+ <text class="tip">系统正在预约该老师,预约结果稍后会发送至您的手机</text>
+
+ <view class="btn-back"  bindtap='bindBackToHome'>返回</view>
+
+</view>

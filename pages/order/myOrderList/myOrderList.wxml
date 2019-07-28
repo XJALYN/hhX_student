@@ -1,0 +1,22 @@
+<!--pages/myOrderList/myOrderList.wxml-->
+<import src="./orderItem/index" />
+<import src="./tabs/index" />
+
+<view class="container">
+  <template is="tabs" data="{{tabs,activeIndex}}"/>
+  <view style='height:100rpx'></view>
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <template is="orderItem" data="{{item}}"/>
+  </block>
+  
+ 
+  <x-error wx:if="{{list.length==0}}" title="暂无订单" style="margin-top:100px;"> </x-error>
+
+
+
+  <view class="footer" wx:if="{{!loading&&list.length>=limit}}">
+    <view class="line"></view>
+    <view class="tip">~没有了~</view>
+    <view class="line"></view>
+  </view>
+</view>

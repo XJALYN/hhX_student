@@ -1,0 +1,19 @@
+<!--pages/teacherList/rater/index.wxml-->
+<view class="rater">
+ <block wx:for="{{numFullStar}}" wx:key="{{index}}">
+   <image class="rater__star--active"></image>
+ </block>
+  <block wx:if="{{percentStar!=0}}">
+   <image class="rater__star-percent-25" wx:if="{{percentStar <= 4}}"></image>
+   <image class="rater__star-percent-50" wx:elif="{{percentStar <= 6}}"></image>
+   <image class="rater__star-percent-75" wx:else></image>
+  </block>
+  <block wx:elif="{{numFullStar  != 5}}">
+     <image class="rater__star"></image>
+  </block>
+  <block wx:for="{{4-numFullStar}}" wx:if="{{4-numFullStar > 0}}">
+     <image class="rater__star"></image>
+  </block>
+  
+ 
+</view>

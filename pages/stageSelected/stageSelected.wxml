@@ -1,0 +1,20 @@
+<!--pages/stageSelected/stageSelected.wxml-->
+<view class="stage-selected">
+  <image class="banner" src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=456407103,1676695107&fm=27&gp=0.jpg'></image>
+
+  <view class="navigation-title animated fadeInUp">请选择课业阶段</view>
+  <view class="stage-list animated fadeInUp" >
+  <block wx:for="{{stageList}}">
+   <view class=" stage-item assist-bg-color {{stageIndex==index?'stage-item-selected':''}}" bindtap='bindSelectedStage' data-index='{{index}}'>
+   <view class="stage-text">{{item.stage}}</view>
+    <view class="stage-text">课业</view>
+ 
+    </view>
+   </block>
+  </view>
+  <view wx:if="{{stageIndex==-1}}" class="btn-diable">请先选择一项</view>
+  <picker  wx:if="{{stageIndex>=0}}" range-key='grade' range='{{stageList[stageIndex].grades}}' bindchange='bindPushToFilterCouse'>
+    <view class="btn-confirm main-color" >确认我的选择</view>
+  </picker>
+  
+</view>

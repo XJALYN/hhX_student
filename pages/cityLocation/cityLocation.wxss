@@ -1,0 +1,66 @@
+/* pages/location/location.wxss */
+@import "./teacherItem/index.wxss";
+@import "./header/index";
+@import "./filterSubject/index";
+
+.location{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+}
+
+.map{
+  margin-top: 100rpx;
+  width: 100vw;
+  height: calc(100vh - 100rpx);
+}
+
+.teacher-list{
+  position:fixed;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0,0,0,0);
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: white;
+  border-bottom: 1px solid rgb(247,247,247);
+  box-sizing: border-box;
+}
+
+.header__title{
+  margin-left: 10px;
+}
+
+.header__btn-delete{
+  margin-right: 10px;
+  text-decoration: underline;
+}
+.list-bg{
+  position:fixed;
+  bottom: 0;
+  height:360px;
+  width:100%;
+  background-color: white;
+}
+.list{
+  position:fixed;
+  bottom: 0;
+  height:360px;
+  width:100%;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.list-item{
+  width: 100%;
+  height: 60px;
+  background-color: white;
+}

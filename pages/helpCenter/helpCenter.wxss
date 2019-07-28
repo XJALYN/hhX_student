@@ -1,0 +1,18 @@
+/* pages/helpCenter/helpCenter.wxss */
+.question{
+  padding:5px 15px;
+  padding-top: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  color: rgb(255,55,0);
+  align-self: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+.answer{
+   padding:3px 15px;
+  font-size: 15px;
+  color: rgb(51,51,51);
+  width: 100%;
+  box-sizing: border-box;
+}

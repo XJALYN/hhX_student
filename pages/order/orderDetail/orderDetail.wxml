@@ -1,0 +1,17 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<import src="./header/index" />
+<import src="./courseInfo/index" />
+<import src="./address/index" />
+<import src="./orderInfo/index" />
+<view  wx:if="{{order}}" >
+  
+ <template is="header"data="{{order}}"/>
+ <template is="courseInfo" data="{{order}}"/>
+ <template is="address" data="{{order}}"/>
+ <template is="orderInfo" data="{{order}}"/> 
+ 
+  <view class="btn-pay" bindtap='bindPushToPay' wx:if="{{order.status==-1}}">支付</view>
+  <view wx:if="{{order.is_allow_cancel}}" class="btn-pay btn-pay--disable" bindtap='bindCancle'>取消订单</view>
+  <view wx:if="{{order.is_allow_refund}}" class="btn-pay btn-pay--disable" bindtap='bindCancle'>申请退款</view>
+  <view style='height:20rpx;'></view>
+</view>

@@ -1,0 +1,42 @@
+<!--pages/bindPhone/bindPhone.wxml-->
+<view>
+
+   <!-- 手机号码 -->
+   <view class="cell">
+     <view class="cell__title">
+     手机号码
+     </view>
+     <input class="cell__phone" 
+            placeholder='请输入手机号码' 
+            placeholder-style='color:#9B9B9B;font-size:24rpx;' 
+            type="number"
+            bindinput='bindInputPhone'>  </input>
+     <view class="cell__line"></view>
+   </view>
+
+   <!-- 验证码 -->
+   <view class="cell">
+     <view class="cell__title">验证码</view>
+     <view class="cell__mid">
+       <input class="cell__code" 
+              placeholder='输入验证码' 
+              type="number"
+              placeholder-style='color:#9B9B9B;font-size:24rpx;' 
+              bindinput='bindInputCode'>
+       </input>
+       <view class="cell__btn" 
+             wx:if="{{duration== 60}}" 
+             bindtap='bindGetCode'>
+          获取验证码
+       </view>
+       <view class="cell__btn cell__btn--disable" 
+             wx:else="{{duration== 60}}" 
+             bindtap='bindGetCode'>
+          {{duration}}s后重新获取
+       </view>
+     </view>
+     <view class="cell__line"></view>
+   </view>
+   <view wx:if="{{phone==''||code==''}}" class="btn-bind">立即绑定</view>
+   <view wx:else class="btn-bind btn-bind--active" bindtap='bindToSubmit'>立即绑定</view>
+</view>

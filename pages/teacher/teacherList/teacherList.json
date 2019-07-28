@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "附近老师",
+  "disableScroll":true,
+  "usingComponents":{
+    "x-tag":"/X/tag/index",
+    "x-error":"/X/error/index",
+    "x-rater":"./rater/index"
+  }
+}

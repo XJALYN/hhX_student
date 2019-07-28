@@ -1,0 +1,44 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class="container">
+  <view class="item" bindtap='bindChoiceAvator'>
+    <view class="title">头像</view>
+    <view style='flex:1'></view>
+    <image class="avator" src='{{userProfile.avatar_url}}'></image>
+    <image class="arrow_right" src="/images/arrow_right.png"></image>
+  </view>
+  <view class="line"></view>
+  <view class="item" bindtap='bindPushToUpdateNickName'>
+    <view class="title">姓名</view>
+    <view style='flex:1'></view>
+    <view class="value">{{userProfile.nick_name}}</view>
+    <image class="arrow_right" src="/images/arrow_right.png"></image>
+  </view>
+<view class="line"></view>
+ <picker range='{{sexList}}' value='{{sexIndex}}' bindchange='bindChoiceSex'>
+   <view class="item">
+   <view class="title">性别</view>
+   <view style='flex:1'></view>
+    <view class="value">{{sexList[userProfile.gender]}}</view>
+    <image class="arrow_right" src="/images/arrow_right.png"></image>
+  </view>
+ </picker>
+<view class="line"></view>
+
+<view class="item"  bindtap='bindPushToRealName'>
+    <view class="title">实名认证</view>
+    <view style='flex:1'></view>
+    <view class="value"></view>
+    <view class="value" wx:if="{{real_name_certified_status==-1}}">未认证</view>
+    <view class="value" wx:if="{{real_name_certified_status==0}}">认证中</view>
+    <view class="value" wx:if="{{real_name_certified_status==1}}">已认证</view>
+    <view class="value" wx:if="{{real_name_certified_status==2}}">认证失败</view>
+    <image class="arrow_right" src="/images/arrow_right.png"></image>
+  </view>
+<view class="line"></view>
+
+
+
+
+
+
+</view>

@@ -1,0 +1,34 @@
+<!--pages/address/address.wxml-->
+<view class="container">
+  <view class="item">
+    <view class="title">联系人</view>
+    <input placeholder='请填写姓名' bindinput='bindInputName' value="{{contact_name}}"></input>
+  </view>
+
+  <view class="item">
+   <view class="item-sex {{gender==1?'item-sex--active':''}}" data-index='1' bindtap='bindChangeGender'>男</view>
+    <view class="item-sex {{gender==2?'item-sex--active':''}}" data-index='2' bindtap='bindChangeGender'>女</view>
+   
+  </view>
+
+  <view class="item">
+    <view class="title">手机号</view>
+    <input placeholder='请填写手机号码' bindinput='bindInputTel' value='{{phone}}'></input>
+  </view>
+
+  <view class="item">
+    <view class="title">街道</view>
+    <view class="value">{{address}}</view>
+    <image class="arrow_right" src="/images/address_location.png" bindtap='bindSelectedAddress'></image>
+  </view>
+
+
+  <view class="item">
+    <view class="title">详细地址</view>
+    <input class="value" placeholder='请输入详细地址(如小区地址,门牌号等)' value='{{address_detail}}' bindinput='bindInputAddress'></input>
+  </view>
+
+
+  <view class="btn-save " bindtap='bindSave' hover-class='btn-hover'>保存</view>
+  <view class="btn-delete" bindtap='bindDelete' hover-class='btn-hover'>删除</view>
+</view>

@@ -1,0 +1,68 @@
+<!--pages/me/me.wxml-->
+<import src="./orderMenu/index" />
+<view class="me">
+<view class="top-view" bindtap='bindPushToUserInfo'>
+<image class="avator" src="{{avatar_url}}" ></image>
+ <view  class="left-view">
+  <view class="username">{{nick_name}}</view>
+  <view class="edit-tip">编辑个人资料</view>
+ </view>
+ <image class="btn-arrow"></image>
+</view>
+<template is='orderMenu' />
+
+
+<view class="list">
+
+ <view class="item" bindtap='bindPushToMyAccount'>
+  <image class="icon" src="/images/me_account.png"></image>
+  <label class="title">我的账户</label>
+  <view style='flex:1'></view>
+  <view class="value">{{balance}}元</view>
+  <image class="arrow-right" src="/images/arrow_right.png"></image>
+</view>
+
+
+
+<view class="item" bindtap='bindPushToAddressList'>
+  <image class="icon" src="/images/me_address.png"></image>
+  <label class="title">地址管理</label>
+  <view style='flex:1'></view>
+  <image class="arrow-right" src="/images/arrow_right.png"></image>
+</view> 
+
+
+
+
+ <view class="item" bindtap='bindPushToHelp'>
+  <image class="icon" src="/images/me_service.png"></image>
+  <label class="title">客服中心</label>
+  <view style='flex:1'></view>
+  <image class="arrow-right" src="/images/arrow_right.png"></image> </view> 
+
+
+
+ <view class="item" bindtap='bindPushToCollect'>
+  <image class="icon" src="/images/me_collect.png"></image>
+  <label class="title">我的收藏</label>
+  <view style='flex:1'></view>
+  <image class="arrow-right" src="/images/arrow_right.png"></image> </view> 
+
+
+
+
+
+ <view class="item" bindtap='bindPushToCertification'>
+  <image class="icon" src="/images/me_authorize.png"></image>
+  <label class="title">家长认证</label>
+  <view style='flex:1'></view>
+  <view class="value" wx:if="{{real_name_certified_status==-1}}">前往认证</view>
+  <view class="value" wx:if="{{real_name_certified_status==0}}">审核中</view>
+  <view class="value" wx:if="{{real_name_certified_status==1}}">已认证</view>
+  <view class="value" wx:if="{{real_name_certified_status==2}}">认证失败</view>
+  <image class="arrow-right" src="/images/arrow_right.png"></image> 
+  </view> 
+
+</view>
+
+</view>

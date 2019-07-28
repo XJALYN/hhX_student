@@ -1,0 +1,10 @@
+<!--pages/courseFeedback/courseFeedback.wxml-->
+<view>
+
+  <input class="course-input" placeholder='填写课程反馈' bindinput='bindInput'>
+  
+  </input>
+
+<view  class="btn--feedback" bindtap='bindSubmit'>提交反馈</view>
+
+</view>

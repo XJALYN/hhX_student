@@ -1,0 +1,17 @@
+<!--pages/courseCenter/courseCenter.wxml-->
+<import src="./myCourse/index" />
+<import src="./recordCell/index" />
+<import src="./msgCell/index" />
+<view>
+
+ <template is="myCourse" />
+ <template is="recordCell" data="{{is_accepted_video}}"/>
+
+  <view class="group-title">课程消息</view>
+  <block wx:for="{{messageList}}" wx:key="{{index}}">
+    <template is="msgCell" data="{{item}}"/>
+  </block>
+  
+
+
+</view>

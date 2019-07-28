@@ -1,0 +1,22 @@
+<template name="teacherItem">
+
+  <view class="teacher-item" bindtap='bindPushToDetail' data-teacherid='{{item.id}}'>
+    <image class="teacher-item__avatar" src='{{item.avatar_url}}'></image>
+    <view class="teacher-item__mid">
+      <view class="teacher-item__mid__nickname">{{item.nick_name}}</view>
+      <view class="teacher-item__mid__school">{{item.college_name}}/{{item.lesson_quantity}}h</view>
+      <view class="teacher-item__mid__rater">
+       <image class="teacher-item__mid__rater__icon" src='/images/index_star.png'></image>
+       <view class="teacher-item__mid__rater__title">{{item.rating}}</view>
+      </view>
+
+
+    </view>
+    <view style='flex:1'></view>
+    <view class="teacher-item__right">
+      <view class="teacher-item__right__price">¥{{item.lowest_subject_price}}起</view>
+      <view class="teacher-item__right__distance">{{item.distance}}</view>
+    </view>
+  </view>
+
+</template>

@@ -1,0 +1,38 @@
+<!--pages/location/location.wxml-->
+<import src="./teacherItem/index" />
+<import src="./header/index" />
+<import src="./filterSubject/index" />
+
+<view class="location">
+
+<template is="header" data="{{cityList,cityIndex,stageList,stageIndex,gradeIndex,subjects,subjectIndex,pickerList}}"/>
+
+  <map id="cityMap" class="map" 
+    markers="{{markers}}" 
+    longitude='{{longitude}}' 
+    latitude='{{latitude}}' 
+    scale="11"
+    bindcallouttap="bindcallouttap" 
+    style='height:100vh' 
+    subkey='2J6BZ-XQ3W3-NX23G-YFEL4-K2LWO-5GFKJ'
+    bindregionchange="bindRegionChange">
+  </map>
+
+   <cover-view wx:if="{{showList}}" 
+               class="teacher-list animated slideInUp" 
+               bindtap='bindHideList'>   
+       <cover-view class="list-bg">     
+    </cover-view>          
+      <cover-view class="list" scroll-y bindscroll="bindScrollList"> 
+        <template is="teacherItem"></template>
+        <template is="teacherItem"></template>
+        <template is="teacherItem"></template>
+        <template is="teacherItem"></template>
+        <template is="teacherItem"></template>
+        <template is="teacherItem"></template>
+        <template is="teacherItem"></template>
+        <template is="teacherItem"></template>
+        <template is="teacherItem"></template>
+      </cover-view>
+    </cover-view>
+</view>

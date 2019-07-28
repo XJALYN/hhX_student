@@ -1,0 +1,14 @@
+/* pages/courseCenter/courseCenter.wxss */
+
+@import "./myCourse/index";
+@import "./recordCell/index";
+@import "./msgCell/index";
+
+
+.group-title{
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  font-size: 32rpx;
+  color:#010101;
+  font-weight: 600;
+}

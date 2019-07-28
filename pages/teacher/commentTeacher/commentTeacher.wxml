@@ -1,0 +1,26 @@
+<!--pages/commentTeacher/commentTeacher.wxml-->
+ <import src="./cell/index" />
+ <view class="container">
+
+ <template is="cell" data="{{subject_name,avatar_url,nick_name}}"/>
+
+ <view class="input-container">
+ <textarea class="input-text" 
+ placeholder='老师的授课态度如何,是否有认真备课,课程安排是否合理,快来说说你的看法'
+ placeholder-style='color:#9B9B9B'
+ bindinput='bindInputComment'
+ > </textarea> 
+ <view class="input-tag">最少输入{{wordsMin}}个字</view>
+ </view>
+  
+  
+
+  <view class="tag-list">
+   <x-rate value="{{item.value}}" title="{{item.name}}" bindchange="bindChangeRate" wx:for="{{rateList}}" wx:key="{{index}}" data-index="{{index}}"></x-rate>
+  </view>
+
+
+  <view class="btn-submit" bindtap='bindSubmit'> 提交 </view>
+ 
+</view>
+

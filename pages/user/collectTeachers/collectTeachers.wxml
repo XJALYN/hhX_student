@@ -1,0 +1,9 @@
+<!--pages/user/collectTeachers/collectTeachers.wxml-->
+<import src="./teacherItem/index" />
+
+<view>
+  <block wx:for="{{list}}" wx:key="{{index}}">
+     <template is="teacherItem" data="{{item,index}}"/>
+  </block>
+ 
+</view>

@@ -1,0 +1,70 @@
+/* pages/bindPhone/bindPhone.wxss */
+.cell{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  width: calc(100% - 60rpx);
+}
+.cell__title{
+  font-size: 32rpx;
+  color: #030303;
+  font-weight:600;
+}
+.cell__phone{
+  margin-top: 30rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+}
+.cell__line{
+  margin-top: 22rpx;
+  height: 1px;
+  background-color: #D8D8D8;
+}
+.cell__mid{
+   margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.cell__code{
+  height: 45rpx;
+  line-height: 45rpx;
+  flex:1;
+}
+
+.cell__btn{
+ min-width: 131rpx;
+ height: 54rpx;
+ padding-left: 10rpx;
+ padding-right: 10rpx;
+ line-height: 54rpx;
+ font-size: 24rpx;
+ color: #FF6D10;
+ border:1px solid #FF6D10;
+ border-radius: 10rpx;
+ text-align: center;
+}
+
+.cell__btn--disable{
+   color: #9B9B9B;
+ border:1px solid #9B9B9B;
+}
+.btn-bind{
+ width: calc(100% - 60rpx);
+ margin-top: 30rpx;
+ height: 104rpx;
+ line-height: 104rpx;
+ text-align: center;
+ background: #EFEFEF;
+ color: #4A4A4A;
+ border-radius: 10rpx;
+ font-size: 32rpx;
+ margin-left: 30rpx;
+}
+
+.btn-bind--active{
+  background-color: #FF6D10;
+  color: white;
+}

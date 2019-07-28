@@ -1,0 +1,11 @@
+<!--pages/complaintTeacher/complaintTeacher.wxml-->
+<view class="complaint-teacher"> 
+
+
+<textarea placeholder='请详细描述问题,老师本人不会看到!'>
+
+</textarea>
+
+<view class="btn-submit">提交</view>
+
+</view>

@@ -1,0 +1,20 @@
+<!--pages/uploadID/uploadID.wxml-->
+<view>
+  <view class="cell">
+    <view class="cell__title">联系人</view>
+    <input class="cell__input" placeholder='请输入真实姓名' placeholder-style='color:#9B9B9B;font-size:24rpx;' bindinput='bindInputName' value='{{real_name}}'></input>
+  </view>
+
+    <view class="cell">
+    <view class="cell__title">身份证号码</view>
+    <input class="cell__input" placeholder='请输入15或18位身份证号码' placeholder-style='color:#9B9B9B;font-size:24rpx;' bindinput='bindInputID' value='{{identified_card_number}}'></input>
+  </view>
+
+  <view class="upload__title">手持身份证上传</view>
+   <view class="upload">
+    <image class="upload__image-face" src="{{positive_image_url}}" bindtap='bindUploadIDCardFront'></image>
+    <image class="upload__image-back" src="{{opposite_image_url}}" bindtap='bindUploadIDCardBack'></image>
+   </view>
+
+   <view class="btn-submit" bindtap='bindSubmit'>提交申请</view>
+</view>
